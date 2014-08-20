@@ -1,17 +1,17 @@
 # The method used to install kibana.  `git` will clone the git repo,
 # `file` will download from elasticsearch.org
-default['kibana']['install_type'] = 'file' # git | file
+default['kibana']['install_type'] = 'git' # git | file
 
 # Values to use for git method of installation
-default['kibana']['git']['url'] = 'https://github.com/elasticsearch/kibana'
+default['kibana']['git']['url'] = 'https://github.com/BATYD-Turksat/cache-kibana'
 default['kibana']['git']['branch'] = 'master'
 default['kibana']['git']['type'] = 'sync' # checkout | sync
 
 # Values to use for file method of installation
 default['kibana']['file']['type'] = 'tgz' # zip | tgz
-default['kibana']['file']['url'] = 'https://download.elasticsearch.org/kibana/kibana/kibana-3.1.0.tar.gz'
-default['kibana']['file']['version'] = '3.1.0' # must match version number of above
-default['kibana']['file']['checksum'] = '059a4b6b507b9ff771901d12035e499b0e8d1cae7d9e5284633e19da6c294e07' # sha256 ( shasum -a 256 FILENAME )
+default['kibana']['file']['url'] = 'https://github.com/BATYD-Turksat/cache-kibana/archive/v3.1.0.1.tar.gz'
+default['kibana']['file']['version'] = '3.1.0.1' # must match version number of above
+default['kibana']['file']['checksum'] = '66f65df78a509f2da127e7e1184c8d474c24d52de063dc852ee8d1baaa8cdcfe' # sha256 ( shasum -a 256 FILENAME )
 
 # Which webserver to use, and webserver options.
 default['kibana']['webserver'] = 'nginx' # nginx or apache
